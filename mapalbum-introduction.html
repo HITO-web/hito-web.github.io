@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapAlbum - 思い出を地図に残すWebアプリの紹介 | HITO-web Blog</title>
+    <meta name="description" content="写真と位置情報で思い出を記録できるWebアプリ「MapAlbum」の使い方と魅力を紹介します。">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        .meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+            font-size: 1.2em;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            margin: 25px 0;
+        }
+        .features {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 25px 0;
+        }
+        .features ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        .features li {
+            margin: 8px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #95a5a6;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background-color: #7f8c8d;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MapAlbum - 思い出を地図に残すWebアプリ</h1>
+        <p class="meta">投稿日: 2025年2月9日 | カテゴリ: Webアプリ紹介</p>
+
+        <p>旅行の写真を撮っても、後から「これどこで撮ったんだっけ？」と悩んだことはありませんか？MapAlbumは、そんな悩みを解決する、写真と位置情報を組み合わせて思い出を記録できる無料のWebアプリケーションです。</p>
+
+        <div class="highlight">
+            <strong>MapAlbumとは？</strong><br>
+            地図上に写真をピン留めして、あなたの思い出を視覚的に整理できるWebアプリです。旅行の記録、お気に入りのカフェ巡り、家族との思い出など、様々な場面で活用できます。
+        </div>
+
+        <h2>MapAlbumの魅力</h2>
+
+        <h3>1. シンプルで直感的な操作</h3>
+        <p>難しい設定は一切不要。地図上をクリックして写真を追加するだけで、すぐに使い始められます。スマートフォンでもパソコンでも、ブラウザがあればどこでも利用可能です。</p>
+
+        <h3>2. 位置情報で思い出を整理</h3>
+        <p>写真と一緒に場所の情報を記録できるので、「どこで何をしたか」が一目瞭然。時系列ではなく、場所で思い出を振り返ることができます。</p>
+
+        <h3>3. プライバシー重視の設計</h3>
+        <p>あなたのデータはブラウザのローカルストレージに保存されます。サーバーにアップロードされることはないので、プライバシーが守られます。</p>
+
+        <div class="features">
+            <strong>主な機能：</strong>
+            <ul>
+                <li>📍 地図上に写真をピン留め</li>
+                <li>📝 各写真にメモやタイトルを追加</li>
+                <li>🗺️ インタラクティブな地図表示</li>
+                <li>📱 スマートフォン・タブレット対応</li>
+                <li>💾 ブラウザのローカルストレージに保存</li>
+                <li>🔒 プライバシー保護（サーバーアップロード不要）</li>
+            </ul>
+        </div>
+
+        <h2>こんな使い方がおすすめ</h2>
+
+        <h3>旅行の記録として</h3>
+        <p>訪れた観光地や美味しかったレストランを写真と一緒に地図に記録。後から旅のルートを振り返ったり、友人におすすめスポットを紹介したりするのに便利です。</p>
+
+        <h3>カフェ巡りやグルメマップ</h3>
+        <p>お気に入りのカフェやレストランを写真付きで記録。自分だけのグルメマップを作成できます。メモ機能を使えば、おすすめメニューや評価も残せます。</p>
+
+        <h3>家族の思い出アルバム</h3>
+        <p>家族で訪れた公園や遊び場を記録して、成長の思い出を地図上に残せます。子どもが大きくなったときに、一緒に振り返るのも素敵です。</p>
+
+        <h3>散歩コースの記録</h3>
+        <p>日々の散歩で見つけた季節の花や風景を記録。自分だけの散歩マップを作って、お気に入りのルートを楽しめます。</p>
+
+        <h2>使い方はとっても簡単</h2>
+
+        <p>MapAlbumの使い方は3ステップ：</p>
+
+        <ol>
+            <li><strong>地図上でクリック</strong> - 写真を追加したい場所をクリック</li>
+            <li><strong>写真を選択</strong> - デバイスから写真を選んでアップロード</li>
+            <li><strong>メモを追加</strong> - タイトルや説明を入力（任意）</li>
+        </ol>
+
+        <p>これだけで、あなたの思い出が地図上に記録されます。追加した写真をクリックすれば、いつでも詳細を確認できます。</p>
+
+        <h2>今すぐ試してみよう</h2>
+
+        <p>MapAlbumは完全無料で、アカウント登録も不要です。ブラウザがあればすぐに使い始められます。あなたの思い出を地図に残してみませんか？</p>
+
+        <a href="/MapAlbum-Memories-on-the-Map/" class="cta-button">MapAlbumを試してみる →</a>
+
+        <hr style="margin: 50px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+        <h1>MapAlbum - A Web App to Preserve Memories on a Map</h1>
+        <p class="meta">Published: February 9, 2025 | Category: Web App Introduction</p>
+
+        <p>Have you ever taken photos during a trip and later wondered, "Where did I take this?" MapAlbum is a free web application that solves this problem by allowing you to record memories by combining photos with location information.</p>
+
+        <div class="highlight">
+            <strong>What is MapAlbum?</strong><br>
+            A web app that lets you pin photos on a map to visually organize your memories. Perfect for travel records, favorite cafe tours, family memories, and more.
+        </div>
+
+        <h2>Why MapAlbum?</h2>
+
+        <h3>1. Simple and Intuitive</h3>
+        <p>No complicated setup required. Just click on the map and add photos to start using it immediately. Works on both smartphones and computers with any browser.</p>
+
+        <h3>2. Organize Memories by Location</h3>
+        <p>Record location information along with photos, making it easy to see "where you did what" at a glance. Review your memories by place rather than just chronologically.</p>
+
+        <h3>3. Privacy-First Design</h3>
+        <p>Your data is stored in your browser's local storage. Nothing is uploaded to servers, ensuring your privacy is protected.</p>
+
+        <div class="features">
+            <strong>Key Features:</strong>
+            <ul>
+                <li>📍 Pin photos on the map</li>
+                <li>📝 Add notes and titles to each photo</li>
+                <li>🗺️ Interactive map display</li>
+                <li>📱 Smartphone and tablet compatible</li>
+                <li>💾 Saved in browser's local storage</li>
+                <li>🔒 Privacy protection (no server uploads)</li>
+            </ul>
+        </div>
+
+        <h2>Recommended Uses</h2>
+
+        <h3>Travel Records</h3>
+        <p>Record tourist spots and delicious restaurants with photos on the map. Great for reviewing your travel routes later or recommending spots to friends.</p>
+
+        <h3>Cafe Tours and Gourmet Maps</h3>
+        <p>Create your own gourmet map by recording favorite cafes and restaurants with photos. Use the memo function to note recommended menu items and ratings.</p>
+
+        <h3>Family Memory Album</h3>
+        <p>Record parks and playgrounds visited with family, preserving growth memories on the map. Perfect to look back on together when children grow up.</p>
+
+        <h3>Walking Route Records</h3>
+        <p>Document seasonal flowers and scenery found during daily walks. Create your own walking map and enjoy your favorite routes.</p>
+
+        <h2>Easy to Use in 3 Steps</h2>
+
+        <ol>
+            <li><strong>Click on the map</strong> - Click where you want to add a photo</li>
+            <li><strong>Select a photo</strong> - Choose and upload a photo from your device</li>
+            <li><strong>Add a note</strong> - Enter a title and description (optional)</li>
+        </ol>
+
+        <p>That's it! Your memories are now recorded on the map. Click on any added photo to view details anytime.</p>
+
+        <h2>Try It Now</h2>
+
+        <p>MapAlbum is completely free and requires no account registration. You can start using it immediately with just a browser. Why not preserve your memories on a map?</p>
+
+        <a href="/MapAlbum-Memories-on-the-Map/" class="cta-button">Try MapAlbum Now →</a>
+
+        <div style="margin-top: 50px;">
+            <a href="/index.html" class="back-link">← トップページに戻る / Back to Top</a>
+        </div>
+    </div>
+</body>
+</html>
