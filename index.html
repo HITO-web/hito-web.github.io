@@ -16,6 +16,11 @@
             border-bottom: 3px solid #000;
             padding-bottom: 10px;
         }
+        h2 {
+            border-bottom: 2px solid #666;
+            padding-bottom: 8px;
+            margin-top: 50px;
+        }
         .project {
             margin: 30px 0;
             padding: 20px;
@@ -25,6 +30,28 @@
         .project:hover {
             transform: translateX(5px);
             box-shadow: -5px 5px 0 #000;
+        }
+        .blog-post {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #0066cc;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s;
+        }
+        .blog-post:hover {
+            background-color: #e9ecef;
+        }
+        .blog-post h3 {
+            margin-top: 0;
+            color: #000;
+        }
+        .blog-post p {
+            margin: 8px 0;
+            color: #333;
+        }
+        .blog-post .read-more {
+            display: inline-block;
+            margin-top: 8px;
         }
         a {
             color: #0066cc;
@@ -61,6 +88,20 @@
         <h2>Map Album - 思い出を地図に</h2>
         <p>写真と位置情報で思い出を記録するWebアプリケーション</p>
         <a href="/MapAlbum-Memories-on-the-Map/">アプリを開く →</a>
+    </div>
+
+    <h2>Blog / ブログ</h2>
+
+    <div class="blog-post">
+        <h3>MapAlbum - 思い出を地図に残すWebアプリ</h3>
+        <p>地図上に写真をピン留めして、あなたの思い出を視覚的に整理できるWebアプリ「MapAlbum」の使い方と魅力を紹介します。</p>
+        <a href="/mapalbum-introduction.html" class="read-more">続きを読む →</a>
+    </div>
+
+    <div class="blog-post">
+        <h3>思い出を記録する3つの方法を徹底比較</h3>
+        <p>紙のアルバム、デジタル写真、地図アプリ。それぞれのメリット・デメリットを詳しく解説し、あなたに最適な記録方法を見つけるお手伝いをします。</p>
+        <a href="/memory-recording-comparison.html" class="read-more">続きを読む →</a>
     </div>
     
     <footer>
