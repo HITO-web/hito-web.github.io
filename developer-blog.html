@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapAlbumを作った理由と今後の展望 - 開発者ブログ | HITO-web Blog</title>
+    <meta name="description" content="MapAlbumの開発者が、このアプリを作った理由と今後の開発計画について語ります。">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        .meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            font-size: 1.5em;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+            font-size: 1.2em;
+        }
+        p {
+            margin: 15px 0;
+        }
+        .intro {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-left: 4px solid #2196f3;
+            margin: 25px 0;
+            font-style: italic;
+        }
+        .highlight-box {
+            background-color: #fff3cd;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            margin: 25px 0;
+        }
+        .feature-box {
+            background-color: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .feature-box h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .future-plans {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #95a5a6;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background-color: #7f8c8d;
+        }
+        blockquote {
+            border-left: 4px solid #95a5a6;
+            padding-left: 20px;
+            margin: 25px 0;
+            color: #555;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MapAlbumを作った理由と今後の展望</h1>
+        <p class="meta">投稿日: 2025年2月9日 | カテゴリ: 開発者ブログ | 作成者: HITO</p>
+
+        <div class="intro">
+            <p>はじめまして。MapAlbumの開発者です。今回は、なぜこのアプリを作ったのか、そして今後どのように発展させていきたいかについて書きたいと思います。</p>
+        </div>
+
+        <h2>MapAlbumを作った理由</h2>
+
+        <h3>写真と旅行への想い</h3>
+        <p>私は写真を撮ることと旅行することが大好きです。一眼レフカメラを持って新しい場所を訪れ、その瞬間をファインダー越しに切り取ることは、私にとって何よりも楽しい時間です。</p>
+
+        <p>しかし、一眼レフで写真をたくさん撮れば撮るほど、ある問題に直面するようになりました。</p>
+
+        <blockquote>
+            「この写真、どこで撮ったんだっけ？」<br>
+            「あの旅行で訪れた場所、全部覚えてないな…」
+        </blockquote>
+
+        <p>一眼レフで撮影した写真は画質が良い分、パソコンのハードディスクやクラウドストレージに何千枚も保存されています。しかし、その中から特定の場所の写真を探すのは意外と大変です。ファイル名や日付順に並んでいても、「あの美しい景色はどこだったか」を思い出すのは難しいものです。</p>
+
+        <p>スマートフォンの写真なら位置情報が自動で記録されますが、一眼レフの場合は別途GPS機器を使わない限り、撮影場所の情報は残りません。メモを取っていても、写真と場所を紐付けるのは手間がかかります。</p>
+
+        <h3>既存サービスへの不満</h3>
+        <p>写真と位置情報を組み合わせたサービスは、すでにいくつか存在していました。しかし、実際に使ってみると、いくつかの不便さを感じました。</p>
+
+        <div class="feature-box">
+            <h3>既存サービスで感じた課題</h3>
+            <ul>
+                <li><strong>会員登録が必須</strong> - アカウント作成やログインが面倒</li>
+                <li><strong>有料プランへの誘導</strong> - 無料版では機能が制限されている</li>
+                <li><strong>プライバシーの懸念</strong> - 写真や位置情報がサーバーに保存される不安</li>
+                <li><strong>複雑すぎる機能</strong> - シンプルに使いたいだけなのに、機能が多すぎて迷う</li>
+            </ul>
+        </div>
+
+        <p>「もっとシンプルで、すぐに使えて、安心できるサービスがあればいいのに」</p>
+
+        <p>そう思ったことが、MapAlbumを作るきっかけになりました。</p>
+
+        <h2>MapAlbumで実現したかったこと</h2>
+
+        <h3>1. 会員登録不要、すぐに使える</h3>
+        <p>アカウント作成やログインなしで、ブラウザを開いたらすぐに使えるようにしました。思い立ったときにすぐ記録できる、そんな手軽さを大切にしています。</p>
+
+        <h3>2. 基本機能は完全無料</h3>
+        <p>写真を地図上に記録するという基本的な機能は、すべて無料で使えます。「有料プランに誘導される」といったストレスがない、純粋に思い出を記録するためのツールを目指しました。</p>
+
+        <h3>3. プライバシーを守る</h3>
+        <p>写真や位置情報は、すべてブラウザのローカルストレージに保存されます。サーバーにアップロードされることはありません。自分のデータは自分の手元に、という考え方を大切にしています。</p>
+
+        <h3>4. シンプルで使いやすく</h3>
+        <p>「地図上に写真を追加する」というシンプルな操作だけで使えるように設計しました。複雑な設定や、使わない機能はできるだけ省き、直感的に使えることを重視しています。</p>
+
+        <div class="highlight-box">
+            <p><strong>開発のコンセプト：</strong><br>
+            「自分が本当に使いたいと思えるサービスを作る」</p>
+            <p>これがMapAlbum開発の根底にある考え方です。まず自分自身が満足できるものを作り、それを同じような悩みを持つ人たちと共有したいと思いました。</p>
+        </div>
+
+        <h2>今後の展望</h2>
+
+        <p>MapAlbumはまだ始まったばかりです。今後も継続的に改善を続けていく予定です。</p>
+
+        <div class="future-plans">
+            <h3>📱 短期的な計画（数ヶ月以内）</h3>
+            <ul>
+                <li><strong>1日の追加回数の増加</strong> - より多くの写真を記録できるように制限を緩和</li>
+                <li><strong>ユーザビリティの改善</strong> - より使いやすいインターフェースへの改良</li>
+                <li><strong>バグ修正と安定性向上</strong> - 皆様からのフィードバックをもとに改善</li>
+            </ul>
+        </div>
+
+        <div class="future-plans">
+            <h3>🚀 中長期的な計画</h3>
+            <ul>
+                <li><strong>モバイルアプリ化（iOS / Android）</strong> - ネイティブアプリとして、より快適に使えるように</li>
+                <li><strong>オフライン機能の強化</strong> - インターネット接続なしでも使える機能の拡充</li>
+                <li><strong>データのエクスポート機能</strong> - 記録したデータを他の形式で保存できるように</li>
+                <li><strong>新機能の追加</strong> - 皆様のご意見を聞きながら、有用な機能を検討</li>
+            </ul>
+        </div>
+
+        <h3>アプリ化について</h3>
+        <p>現在、MapAlbumはWebアプリとして動作していますが、iOS・Androidのネイティブアプリとしての展開も検討しています。</p>
+
+        <p>アプリ化によって実現したいこと：</p>
+        <ul>
+            <li>より快適な操作感</li>
+            <li>カメラ機能との連携強化</li>
+            <li>通知機能の活用</li>
+            <li>端末のストレージを活用した大容量保存</li>
+        </ul>
+
+        <p>ただし、「会員登録不要」「基本機能は無料」「プライバシー重視」という基本コンセプトは変わりません。これらは常に守り続けていきます。</p>
+
+        <h2>皆様へのお願い</h2>
+
+        <p>MapAlbumはまだ発展途上のサービスです。皆様からのフィードバックが、サービス改善の大きな力になります。</p>
+
+        <ul>
+            <li>使いにくい点があれば教えてください</li>
+            <li>こんな機能が欲しいというアイデアをお聞かせください</li>
+            <li>バグを見つけたら報告してください</li>
+        </ul>
+
+        <p>お問い合わせは、<a href="/contact.html" style="color: #3498db;">こちらのフォーム</a>からお気軽にどうぞ。</p>
+
+        <h2>最後に</h2>
+
+        <p>MapAlbumは、「自分の思い出を、自分の好きなように記録したい」という単純な想いから生まれました。</p>
+
+        <p>写真を撮ること、旅行すること、そしてその思い出を振り返ること。これらの体験がより豊かになるようなツールを目指して、これからも開発を続けていきます。</p>
+
+        <p>MapAlbumを使って、あなたの大切な思い出を記録してみませんか？</p>
+
+        <a href="/MapAlbum-Memories-on-the-Map/" class="cta-button">MapAlbumを使ってみる →</a>
+
+        <hr style="margin: 60px 0; border: none; border-top: 2px solid #e0e0e0;">
+
+        <h1>Why I Created MapAlbum and Future Plans</h1>
+        <p class="meta">Published: February 9, 2025 | Category: Developer Blog | Author: HITO</p>
+
+        <div class="intro">
+            <p>Hello, I'm the developer of MapAlbum. In this post, I'd like to share why I created this app and how I plan to develop it in the future.</p>
+        </div>
+
+        <h2>Why I Created MapAlbum</h2>
+
+        <h3>My Love for Photography and Travel</h3>
+        <p>I love taking photos and traveling. Visiting new places with my DSLR camera and capturing those moments through the viewfinder is one of my greatest joys.</p>
+
+        <p>However, the more photos I took with my DSLR, the more I faced a particular problem.</p>
+
+        <blockquote>
+            "Where did I take this photo?"<br>
+            "I can't remember all the places I visited on that trip..."
+        </blockquote>
+
+        <p>DSLR photos have excellent quality, so I have thousands stored on my computer's hard drive and cloud storage. However, finding photos from a specific location is surprisingly difficult. Even when sorted by filename or date, remembering "where that beautiful scenery was" can be challenging.</p>
+
+        <p>While smartphone photos automatically record location information, DSLR cameras don't include GPS data unless you use a separate GPS device. Even if I take notes, linking photos to locations requires extra effort.</p>
+
+        <h3>Frustrations with Existing Services</h3>
+        <p>There were already several services that combined photos with location information. However, when I tried using them, I experienced several inconveniences.</p>
+
+        <div class="feature-box">
+            <h3>Challenges I Found in Existing Services</h3>
+            <ul>
+                <li><strong>Registration required</strong> - Creating accounts and logging in was tedious</li>
+                <li><strong>Pushed toward paid plans</strong> - Free versions had limited functionality</li>
+                <li><strong>Privacy concerns</strong> - Anxiety about photos and location data being stored on servers</li>
+                <li><strong>Too many features</strong> - Overwhelming when I just wanted simple functionality</li>
+            </ul>
+        </div>
+
+        <p>"I wish there was a simpler, immediately usable, and trustworthy service."</p>
+
+        <p>This thought became the motivation for creating MapAlbum.</p>
+
+        <h2>What I Wanted to Achieve with MapAlbum</h2>
+
+        <h3>1. No Registration Required, Immediately Usable</h3>
+        <p>I made it possible to use the app immediately upon opening a browser, without account creation or login. I valued the convenience of being able to record memories whenever inspiration strikes.</p>
+
+        <h3>2. Basic Features Completely Free</h3>
+        <p>The basic functionality of recording photos on a map is entirely free. I aimed to create a tool purely for recording memories, without the stress of being pushed toward paid plans.</p>
+
+        <h3>3. Protecting Privacy</h3>
+        <p>All photos and location information are stored in the browser's local storage. Nothing is uploaded to servers. I value the principle that your data stays in your hands.</p>
+
+        <h3>4. Simple and User-Friendly</h3>
+        <p>I designed it to work with just the simple operation of "adding photos to a map." I minimized complex settings and unused features, prioritizing intuitive use.</p>
+
+        <div class="highlight-box">
+            <p><strong>Development Concept:</strong><br>
+            "Create a service I truly want to use"</p>
+            <p>This is the fundamental idea behind MapAlbum's development. I first created something I could be satisfied with, then wanted to share it with others who have similar concerns.</p>
+        </div>
+
+        <h2>Future Plans</h2>
+
+        <p>MapAlbum has just begun. I plan to continue improving it continuously.</p>
+
+        <div class="future-plans">
+            <h3>📱 Short-term Plans (Within a Few Months)</h3>
+            <ul>
+                <li><strong>Increase daily upload limit</strong> - Relaxing restrictions to record more photos</li>
+                <li><strong>Usability improvements</strong> - Refining the interface for better user experience</li>
+                <li><strong>Bug fixes and stability</strong> - Improvements based on user feedback</li>
+            </ul>
+        </div>
+
+        <div class="future-plans">
+            <h3>🚀 Medium to Long-term Plans</h3>
+            <ul>
+                <li><strong>Mobile app development (iOS / Android)</strong> - More comfortable use as native apps</li>
+                <li><strong>Enhanced offline functionality</strong> - Expanding features usable without internet</li>
+                <li><strong>Data export features</strong> - Ability to save recorded data in other formats</li>
+                <li><strong>New feature additions</strong> - Considering useful features based on user feedback</li>
+            </ul>
+        </div>
+
+        <h3>About App Development</h3>
+        <p>While MapAlbum currently operates as a web app, I'm also considering development as native iOS and Android apps.</p>
+
+        <p>What I want to achieve through app development:</p>
+        <ul>
+            <li>More comfortable user experience</li>
+            <li>Stronger camera integration</li>
+            <li>Notification features</li>
+            <li>Large-capacity storage using device storage</li>
+        </ul>
+
+        <p>However, the core concepts of "no registration required," "basic features free," and "privacy-focused" will remain unchanged. These principles will always be maintained.</p>
+
+        <h2>Request to Users</h2>
+
+        <p>MapAlbum is still an evolving service. Your feedback is a tremendous help in improving the service.</p>
+
+        <ul>
+            <li>Please let me know if you find anything difficult to use</li>
+            <li>Share your ideas for features you'd like to see</li>
+            <li>Report any bugs you encounter</li>
+        </ul>
+
+        <p>Feel free to contact us through <a href="/contact.html" style="color: #3498db;">this form</a>.</p>
+
+        <h2>In Closing</h2>
+
+        <p>MapAlbum was born from a simple desire: "I want to record my memories in my own way."</p>
+
+        <p>Taking photos, traveling, and looking back on those memories - I'll continue developing with the goal of creating a tool that enriches these experiences.</p>
+
+        <p>Would you like to try recording your precious memories with MapAlbum?</p>
+
+        <a href="/MapAlbum-Memories-on-the-Map/" class="cta-button">Try MapAlbum →</a>
+
+        <div style="margin-top: 50px;">
+            <a href="/index.html" class="back-link">← トップページに戻る / Back to Top</a>
+        </div>
+    </div>
+</body>
+</html>
