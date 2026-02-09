@@ -34,6 +34,24 @@
         a:hover {
             text-decoration: underline;
         }
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+        .footer-links {
+            margin-bottom: 15px;
+        }
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: normal;
+        }
+        .footer-links a:hover {
+            color: #0066cc;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -44,10 +62,13 @@
         <p>写真と位置情報で思い出を記録するWebアプリケーション</p>
         <a href="/MapAlbum-Memories-on-the-Map/">アプリを開く →</a>
     </div>
+    
     <footer>
-        <p>
-            <a href="/privacy.html" style="color: #666; text-decoration: none; margin-right: 20px;">プライバシーポリシー / Privacy Policy</a>
-        </p>
+        <div class="footer-links">
+            <a href="/privacy.html">プライバシーポリシー / Privacy Policy</a>
+            <a href="/terms.html">利用規約 / Terms of Service</a>
+            <a href="/contact.html">お問い合わせ / Contact</a>
+        </div>
         <p>&copy; 2026 HITO-web. All rights reserved.</p>
     </footer>
 </body>
