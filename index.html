@@ -66,6 +66,30 @@
         a:hover {
             text-decoration: underline;
         }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .lang-switch button {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 8px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+        .lang-switch button:hover {
+            background-color: #e9ecef;
+        }
+        .lang-switch button.active {
+            background-color: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+        .lang-ja { display: block; }
+        .lang-en { display: none; }
         footer {
             margin-top: 60px;
             padding-top: 20px;
@@ -87,41 +111,122 @@
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <button id="lang-ja" class="active" onclick="switchLang('ja')">日本語</button>
+        <button id="lang-en" onclick="switchLang('en')">English</button>
+    </div>
+
     <h1>Map Album</h1>
     
     <div class="project">
-        <h2>Map Album - 思い出を地図に</h2>
-        <p>写真と位置情報で思い出を記録するWebアプリケーション</p>
-        <a href="/MapAlbum-Memories-on-the-Map/">アプリを開く →</a>
+        <h2 class="lang-ja">Map Album - 思い出を地図に</h2>
+        <h2 class="lang-en">Map Album - Memories on the Map</h2>
+        <p class="lang-ja">写真と位置情報で思い出を記録するWebアプリケーション</p>
+        <p class="lang-en">A web application to record memories with photos and location information</p>
+        <a href="/MapAlbum-Memories-on-the-Map/" class="lang-ja">アプリを開く →</a>
+        <a href="/MapAlbum-Memories-on-the-Map/" class="lang-en">Open App →</a>
     </div>
 
-    <h2>Blog / ブログ</h2>
+    <h2 class="lang-ja">Blog / ブログ</h2>
+    <h2 class="lang-en">Blog</h2>
 
     <div class="blog-post">
-        <h3>MapAlbumを作った理由と今後の展望</h3>
-        <p>開発者が語る、MapAlbum誕生の背景と今後の開発計画。一眼レフカメラで撮影した写真の管理に悩んだ経験から生まれたアプリです。</p>
-        <a href="/developer-blog.html" class="read-more">続きを読む →</a>
+        <h3 class="lang-ja">MapAlbumを作った理由と今後の展望</h3>
+        <h3 class="lang-en">Why I Created MapAlbum and Future Plans</h3>
+        <p class="lang-ja">開発者が語る、MapAlbum誕生の背景と今後の開発計画。一眼レフカメラで撮影した写真の管理に悩んだ経験から生まれたアプリです。</p>
+        <p class="lang-en">The developer shares the background of MapAlbum's creation and future development plans. Born from struggles managing DSLR camera photos.</p>
+        <a href="/developer-blog.html" class="read-more lang-ja">続きを読む →</a>
+        <a href="/developer-blog.html" class="read-more lang-en">Read More →</a>
     </div>
 
     <div class="blog-post">
-        <h3>MapAlbum - 思い出を地図に残すWebアプリ</h3>
-        <p>地図上に写真をピン留めして、あなたの思い出を視覚的に整理できるWebアプリ「MapAlbum」の使い方と魅力を紹介します。</p>
-        <a href="/mapalbum-introduction.html" class="read-more">続きを読む →</a>
+        <h3 class="lang-ja">MapAlbum - 思い出を地図に残すWebアプリ</h3>
+        <h3 class="lang-en">MapAlbum - A Web App to Preserve Memories on a Map</h3>
+        <p class="lang-ja">地図上に写真をピン留めして、あなたの思い出を視覚的に整理できるWebアプリ「MapAlbum」の使い方と魅力を紹介します。</p>
+        <p class="lang-en">Introducing MapAlbum, a web app that lets you pin photos on a map to visually organize your memories.</p>
+        <a href="/mapalbum-introduction.html" class="read-more lang-ja">続きを読む →</a>
+        <a href="/mapalbum-introduction.html" class="read-more lang-en">Read More →</a>
     </div>
 
     <div class="blog-post">
-        <h3>思い出を記録する3つの方法を徹底比較</h3>
-        <p>紙のアルバム、デジタル写真、地図アプリ。それぞれのメリット・デメリットを詳しく解説し、あなたに最適な記録方法を見つけるお手伝いをします。</p>
-        <a href="/memory-recording-comparison.html" class="read-more">続きを読む →</a>
+        <h3 class="lang-ja">思い出を記録する3つの方法を徹底比較</h3>
+        <h3 class="lang-en">Three Ways to Record Memories - A Complete Comparison</h3>
+        <p class="lang-ja">紙のアルバム、デジタル写真、地図アプリ。それぞれのメリット・デメリットを詳しく解説し、あなたに最適な記録方法を見つけるお手伝いをします。</p>
+        <p class="lang-en">Paper albums, digital photos, and map apps. Detailed explanation of pros and cons to help you find the best recording method.</p>
+        <a href="/memory-recording-comparison.html" class="read-more lang-ja">続きを読む →</a>
+        <a href="/memory-recording-comparison.html" class="read-more lang-en">Read More →</a>
+    </div>
+
+    <div class="blog-post">
+        <h3 class="lang-ja">MapAlbumを使った1日の記録術</h3>
+        <h3 class="lang-en">Daily Recording with MapAlbum</h3>
+        <p class="lang-ja">散歩コース、カフェ巡り、日常の発見をMapAlbumで記録。毎日がもっと豊かになる記録方法を紹介します。</p>
+        <p class="lang-en">Record walking routes, cafe tours, and daily discoveries with MapAlbum. Make your everyday life richer.</p>
+        <a href="/daily-recording.html" class="read-more lang-ja">続きを読む →</a>
+        <a href="/daily-recording.html" class="read-more lang-en">Read More →</a>
+    </div>
+
+    <div class="blog-post">
+        <h3 class="lang-ja">MapAlbumで自分だけの絶景スポットマップを作ろう</h3>
+        <h3 class="lang-en">Create Your Own Scenic Spot Map with MapAlbum</h3>
+        <p class="lang-ja">撮影場所を記録し、季節ごとの変化を追跡。自分だけの絶景スポットマップを作成して、リピート訪問を計画しましょう。</p>
+        <p class="lang-en">Record shooting locations and track seasonal changes. Create your personal scenic spot map and plan repeat visits.</p>
+        <a href="/scenic-spots-map.html" class="read-more lang-ja">続きを読む →</a>
+        <a href="/scenic-spots-map.html" class="read-more lang-en">Read More →</a>
+    </div>
+
+    <div class="blog-post">
+        <h3 class="lang-ja">MapAlbumでドライブの思い出を残す</h3>
+        <h3 class="lang-en">Recording Drive Memories with MapAlbum</h3>
+        <p class="lang-ja">ドライブルート、立ち寄りスポット、車窓からの景色を記録。思い出のドライブを地図上に残して、次のドライブ計画にも活用しましょう。</p>
+        <p class="lang-en">Record drive routes, stops, and scenery. Preserve memorable drives on a map and use them for future trip planning.</p>
+        <a href="/drive-memories.html" class="read-more lang-ja">続きを読む →</a>
+        <a href="/drive-memories.html" class="read-more lang-en">Read More →</a>
     </div>
     
     <footer>
         <div class="footer-links">
-            <a href="/privacy.html">プライバシーポリシー / Privacy Policy</a>
-            <a href="/terms.html">利用規約 / Terms of Service</a>
-            <a href="/contact.html">お問い合わせ / Contact</a>
+            <a href="/privacy.html" class="lang-ja">プライバシーポリシー</a>
+            <a href="/privacy.html" class="lang-en">Privacy Policy</a>
+            <a href="/terms.html" class="lang-ja">利用規約</a>
+            <a href="/terms.html" class="lang-en">Terms of Service</a>
+            <a href="/contact.html" class="lang-ja">お問い合わせ</a>
+            <a href="/contact.html" class="lang-en">Contact</a>
         </div>
         <p>&copy; 2026 HITO-web. All rights reserved.</p>
     </footer>
+
+    <script>
+        function switchLang(lang) {
+            const jaElements = document.querySelectorAll('.lang-ja');
+            const enElements = document.querySelectorAll('.lang-en');
+            const jaButton = document.getElementById('lang-ja');
+            const enButton = document.getElementById('lang-en');
+            
+            if (lang === 'ja') {
+                jaElements.forEach(el => el.style.display = 'block');
+                enElements.forEach(el => el.style.display = 'none');
+                jaButton.classList.add('active');
+                enButton.classList.remove('active');
+                document.documentElement.lang = 'ja';
+                localStorage.setItem('preferredLang', 'ja');
+            } else {
+                jaElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'block');
+                enButton.classList.add('active');
+                jaButton.classList.remove('active');
+                document.documentElement.lang = 'en';
+                localStorage.setItem('preferredLang', 'en');
+            }
+        }
+        
+        // ページ読み込み時に保存された言語設定を復元
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLang');
+            if (savedLang === 'en') {
+                switchLang('en');
+            }
+        });
+    </script>
 </body>
 </html>
